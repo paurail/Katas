@@ -26,13 +26,11 @@ namespace tdd_katas.RomanNumbers
             {
                 if (newArabic < primitive.Arabic)
                 {
-                    newRoman += primitive.PreStep.Roman;
+                    newRoman += primitive.PreNumber.Roman;
                     newArabic -= primitive.MinimumApplicableNumber;
                 }
-                else
-                {
-                    newArabic -= primitive.Arabic;
-                }
+                else newArabic -= primitive.Arabic;
+
                 newRoman += primitive.Roman;
             }
 
